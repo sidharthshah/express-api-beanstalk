@@ -30,7 +30,12 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/users', user.list);
-app.get('/api/v1/contacts', api.contacts);
+app.get('/api/v1/contacts', api.contactsAll);
+app.get('/api/v1/contacts/:id', api.contactsFindByID);
+app.post('/api/v1/contacts', api.contactsAddNew);
+app.put('/api/v1/contacts/:id', api.contactsUpdate);
+app.delete('/api/v1/contacts/:id', api.contactsDelete);
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
