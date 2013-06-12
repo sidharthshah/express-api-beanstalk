@@ -3,6 +3,6 @@
  * REST API Implementation
  */
 
-exports.hello_world = function(req, res){
-  res.send([{name:'wine1'}, {name:'wine2'}]);
+exports.contacts = function(req, res){
+  res.send([{name:'Sidharth Shah', mobile: '9911990099'}, {name:'Manan Shah', mobile: '1122001122'}]);
 };
